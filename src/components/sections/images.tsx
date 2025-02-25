@@ -21,7 +21,6 @@ export function ImageSlider({
         slidesToShow={breakpoint.md ? 2 : 1}
         transitionDuration={300}
         infinite
-        indicators
         prevArrow={<FaChevronLeft className="md:ml-4 text-3xl" />}
         nextArrow={<FaChevronRight className="md:mr-4 text-3xl" />}
       >

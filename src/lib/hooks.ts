@@ -20,12 +20,19 @@ const getActiveBreakpoints = () => {
 
 // Custom hook
 export const useBreakpoint = () => {
-  const [activeBreakpoints, setActiveBreakpoints] = useState(getActiveBreakpoints());
+  const [activeBreakpoints, setActiveBreakpoints] = useState({
+    sm: true,
+    md: false,
+    lg: false,
+    xl: false,
+    "2xl": false
+  });
 
   useEffect(() => {
     const handleResize = () => {
       setActiveBreakpoints(getActiveBreakpoints());
     };
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -42,6 +49,7 @@ export function useScrollOffset() {
       const newOffset = Math.round(window.scrollY);
       setScrollOffset((prevOffset) => (prevOffset !== newOffset ? newOffset : prevOffset));
     };
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -51,9 +59,7 @@ export function useScrollOffset() {
 }
 
 export function useWindowHeight() {
-  const [windowHeight, setWindowHeight] = useState(
-    typeof window !== "undefined" ? window.innerHeight : 0
-  );
+  const [windowHeight, setWindowHeight] = useState<number | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -61,6 +67,7 @@ export function useWindowHeight() {
     const handleResize = () => {
       setWindowHeight(window.innerHeight);
     };
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

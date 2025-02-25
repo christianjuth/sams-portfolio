@@ -20,7 +20,7 @@ export function BackgroundImage({
       <div
         className="absolute inset-0 bg-black"
         style={{
-          opacity: Math.min((offset / windowHeight) ** 2, 0.3)
+          opacity: windowHeight === null ? 0 : Math.min((offset / windowHeight) ** 2, 0.3)
         }}
       />
     </div>

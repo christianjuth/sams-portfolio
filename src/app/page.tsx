@@ -7,6 +7,8 @@ import { Hero } from "@/components/sections/hero";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Bio } from "@/components/sections/bio";
 
+import Link from 'next/link';
+
 function Section({ children, className }: { children: React.ReactNode, className?: string }) {
   return (
     <section className={`${className} relative max-w-7xl w-full mx-auto mb-20 md:mb-32 px-6`}>
@@ -37,8 +39,7 @@ export default function Page() {
 
         <Section>
           <Bio
-            image="/about.png"
-            title="Samantha Dress"
+            image="/about.png" title="Samantha Dress"
             bio={[
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
@@ -75,6 +76,9 @@ export default function Page() {
             "/slide-1.png",
             "/slide-2.png",
           ]} />
+          <Link href="/photos" className="text-center block pt-3">
+            View all photos
+          </Link>
         </Section>
       </div>
 
