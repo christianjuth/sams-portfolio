@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge'
 
 import { ImageSlider } from "@/components/sections/images";
 import { AudioPlayer } from "@/components/sections/audio-player";
@@ -11,7 +12,7 @@ import Link from 'next/link';
 
 function Section({ children, className }: { children: React.ReactNode, className?: string }) {
   return (
-    <section className={`${className} relative max-w-7xl w-full mx-auto mb-20 md:mb-32 px-6`}>
+    <section className={twMerge("relative max-w-7xl w-full mx-auto mb-20 md:mb-32 px-6", className)}>
       {children}
     </section>
   )
