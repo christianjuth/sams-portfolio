@@ -17,9 +17,28 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair-display);
 }
 
 .each-slideshow-indicator::before {
+  background: white !important;
+}
+
+.rhap_main-controls-button,
+.rhap_repeat-button,
+.rhap_time
+{
+  color: white !important;
+}
+
+.rhap_volume-indicator {
   background: white !important;
 }

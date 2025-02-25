@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: "900",
+const poppins = Playfair_Display({
+  variable: "--font-playfair-display",
+  weight: "800",
   subsets: ['latin']
 });
 
