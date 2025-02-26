@@ -1,4 +1,7 @@
 import { twMerge } from 'tailwind-merge'
+import Image from 'next/image'
+
+import TheRoomies from '@/../public/the-roomies.jpeg'
 
 import { ImageSlider } from "@/components/sections/images";
 import { AudioPlayer } from "@/components/sections/audio-player";
@@ -9,6 +12,8 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { Bio } from "@/components/sections/bio";
 
 import Link from 'next/link';
+import { ExternalLink } from '@/components/ui';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 function Section({ children, className }: { children: React.ReactNode, className?: string }) {
   return (
@@ -35,12 +40,12 @@ export default function Page() {
         </Section>
 
         <Section>
-          <YouTubeSection videoId="-k0XST5khaA" />
+          <YouTubeSection videoId="TWvw9aOVJa4" />
         </Section>
 
         <Section>
           <Bio
-            image="/about.png" title="Samantha Dress"
+            image="/about.png" title="SAMANTHA DRESS"
             bio={[
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
@@ -84,8 +89,25 @@ export default function Page() {
       </div>
 
       <div className="bg-black/90 backdrop-blur-xl py-32 relative" id="book">
-        <Section>
-          <ContactForm email="hi@samanhadress.com" />
+        <Section className="mb-0 md:mb-0">
+          <ContactForm email="hi@samanhadress.com" title="BOOK SAM" />
+        </Section>
+      </div>
+
+      <div className="bg-white backdrop-blur-xl py-20 relative text-black" id="book">
+        <Section className="mb-0 md:mb-0 flex flex-col max-md:items-center">
+          <h2 className="text-xl block mb-6">Other projects</h2>
+
+          <div className="max-w-xs flex flex-col items-center gap-2">
+            <Image src={TheRoomies} alt="The Roomies" />
+            <div className="flex flex-row gap-2 items-center text-2xl">
+              <ExternalLink href="https://www.youtube.com/@theroomies387/featured"><FaYoutube /></ExternalLink>
+              |
+              <ExternalLink href="https://www.instagram.com/theroomiesduo"><FaInstagram /></ExternalLink>
+              |
+              <ExternalLink href="https://www.facebook.com/theroomiesduo"><FaFacebook /></ExternalLink>
+            </div>
+          </div>
         </Section>
       </div>
     </>
