@@ -5,6 +5,8 @@ const IMAGES = [
   "/slide-4.png",
   "/slide-1.png",
   "/slide-2.png",
+  "/slide-5.png",
+  "/slide-6.png",
 ]
 
 export default function Page() {

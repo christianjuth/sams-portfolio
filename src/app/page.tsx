@@ -45,7 +45,8 @@ export default function Page() {
 
         <Section>
           <Bio
-            image="/about.png" title="SAMANTHA DRESS"
+            image="/about.png"
+            title="SAMANTHA DRESS"
             bio={[
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
               "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
@@ -81,6 +82,8 @@ export default function Page() {
             "/slide-4.png",
             "/slide-1.png",
             "/slide-2.png",
+            "/slide-5.png",
+            "/slide-6.png",
           ]} />
           <Link href="/photos" className="text-center block pt-3">
             View all photos
