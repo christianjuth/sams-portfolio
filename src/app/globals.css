@@ -20,11 +20,11 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 */ {
   font-family: var(--font-playfair-display);
 }
 
@@ -34,8 +34,7 @@ h6 {
 
 .rhap_main-controls-button,
 .rhap_repeat-button,
-.rhap_time
-{
+.rhap_time {
   color: white !important;
 }
 

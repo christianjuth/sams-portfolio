@@ -72,7 +72,7 @@ export default function Page() {
           <Bio
             image="/about.png"
             title="SAMANTHA DRESS"
-            bio={["Coming soon..."]}
+            bio={["coming soon..."]}
           />
         </Section>
 
@@ -88,14 +88,18 @@ export default function Page() {
             ]}
           />
           <Link href="/photos" className="text-center block pt-3">
-            View all photos
+            view all photos
           </Link>
         </Section>
       </div>
 
       <div className="bg-black/90 backdrop-blur-xl py-32 relative" id="book">
         <Section className="mb-0 md:mb-0">
-          <ContactForm email="hi@samanhadress.com" title="BOOK SAM" />
+          <ContactForm
+            email="hi@samanhadress.com"
+            title="BOOK SAM"
+            subtitle="solo, duo, or band act offered"
+          />
         </Section>
       </div>
 
@@ -104,7 +108,7 @@ export default function Page() {
         id="book"
       >
         <Section className="mb-0 md:mb-0 flex flex-col max-md:items-center">
-          <h2 className="text-xl block mb-6">Other projects</h2>
+          <h2 className="text-xl block mb-6">other projects</h2>
 
           <div className="max-w-xs flex flex-col items-center gap-2">
             <Image src={TheRoomies} alt="The Roomies" />
