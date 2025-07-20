@@ -9,36 +9,40 @@ export function Hero({
   instagram,
   spotify,
 }: {
-  title: string,
-  blurb: string,
-  bookCta?: string
-  facebook?: string
-  instagram?: string
-  spotify?: string
+  title: string;
+  blurb: string;
+  bookCta?: string;
+  facebook?: string;
+  instagram?: string;
+  spotify?: string;
 }) {
   return (
-    <div className="flex flex-col gap-14 md:items-center justify-center min-h-[100svh] mx-auto relative">
+    <div className="flex flex-col gap-14 md:items-center justify-center min-h-[98svh] mx-auto relative">
       <div className="flex flex-row gap-4 text-4xl">
-        {facebook && <ExternalLink href={facebook}>
-          <FaFacebook />
-        </ExternalLink>}
-        {instagram && <ExternalLink href={instagram}>
-          <FaInstagram />
-        </ExternalLink>}
-        {spotify && <ExternalLink href={spotify}>
-          <FaSpotify />
-        </ExternalLink>}
+        {facebook && (
+          <ExternalLink href={facebook}>
+            <FaFacebook />
+          </ExternalLink>
+        )}
+        {instagram && (
+          <ExternalLink href={instagram}>
+            <FaInstagram />
+          </ExternalLink>
+        )}
+        {spotify && (
+          <ExternalLink href={spotify}>
+            <FaSpotify />
+          </ExternalLink>
+        )}
       </div>
 
-      <h1 className="text-6xl md:text-7xl">
-        {title}
-      </h1>
+      <h1 className="text-6xl md:text-7xl">{title}</h1>
 
-      <p className="text-lg text-center">
-        {blurb}
-      </p>
+      <p className="text-xl text-center">{blurb}</p>
 
-      <Button href="#book" className="w-full">{bookCta}</Button>
+      <Button href="#book" className="w-full">
+        {bookCta}
+      </Button>
     </div>
-  )
+  );
 }

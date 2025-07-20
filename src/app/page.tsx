@@ -18,7 +18,7 @@ function SpotifyEmbed() {
   return (
     <iframe
       src="https://open.spotify.com/embed/track/1AwVF0lSMwlru3CE1K3cqQ?utm_source=generator"
-      className="h-64 w-full"
+      className="h-40 md:h-64 w-full"
       allowFullScreen={false}
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
@@ -54,10 +54,14 @@ export default function Page() {
         <Section className="mb-0 md:mb-0">
           <Hero
             title="SAMANTHA DRESS"
-            blurb="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            blurb="singer • songwriter • instrumentalist • performer • producer • music educator"
             facebook="https://www.facebook.com/sam.laubach.music/"
             instagram="https://www.instagram.com/_samjams"
           />
+        </Section>
+
+        <Section>
+          <SpotifyEmbed />
         </Section>
 
         <Section>
@@ -68,16 +72,8 @@ export default function Page() {
           <Bio
             image="/about.png"
             title="SAMANTHA DRESS"
-            bio={[
-              "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
-              "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
-              "Lorem ipsum odor amet, consectetuer adipiscing elit.Condimentum bibendum iaculis commodo himenaeos egestas habitant cras proin.Mi aenean quis in ornare faucibus elementum pellentesque.Sollicitudin dui dui primis feugiat scelerisque vivamus praesent torquent ? Ornare tellus sed, primis eros faucibus urna.Eu id feugiat aliquet ultricies amet libero.",
-            ]}
+            bio={["Coming soon..."]}
           />
-        </Section>
-
-        <Section>
-          <SpotifyEmbed />
         </Section>
 
         <Section>
