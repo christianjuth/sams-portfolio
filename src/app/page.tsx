@@ -18,7 +18,7 @@ function SpotifyEmbed() {
   return (
     <iframe
       src="https://open.spotify.com/embed/track/1AwVF0lSMwlru3CE1K3cqQ?utm_source=generator"
-      className="h-40 md:h-64 w-full"
+      className="h-[152px] md:h-[232px] w-full bg-[#90180f]"
       allowFullScreen={false}
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
