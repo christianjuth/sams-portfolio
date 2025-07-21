@@ -56,7 +56,7 @@ export default function Page() {
             title="SAMANTHA DRESS"
             blurb="singer • songwriter • instrumentalist • performer • producer • music educator"
             facebook="https://www.facebook.com/sam.laubach.music/"
-            instagram="https://www.instagram.com/_samjams"
+            instagram="https://www.instagram.com/_samanthadress"
           />
         </Section>
 
@@ -96,7 +96,7 @@ export default function Page() {
       <div className="bg-black/90 backdrop-blur-xl py-32 relative" id="book">
         <Section className="mb-0 md:mb-0">
           <ContactForm
-            email="hi@samanhadress.com"
+            email="***REMOVED***"
             title="BOOK SAM"
             subtitle="solo, duo, or band act offered"
           />
