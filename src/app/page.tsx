@@ -72,7 +72,16 @@ export default function Page() {
           <Bio
             image="/about.png"
             title="SAMANTHA DRESS"
-            bio={["coming soon..."]}
+            bio={[
+              "Performing under the stage name Samantha Dress, a heartfelt tribute to her late mother, Susan Dress, Samantha first stepped to the mic at age eleven fronting the Jody Joseph Band at the Stone Pony, where she then performed annually. By her teens she became an official member of the band as a background vocalist, further developing her ear for harmony and ability to collaborate with musicians of all backgrounds, at venues all throughout New Jersey.",
+              "At eighteen Sam launched her solo acoustic act, formerly “Sam Jams”, throughout the Long Beach Island area. Today, she’s a familiar face in Ocean and Monmouth county circuits, with highlights in Puerto Rico, and Manhattan’s West Village piano bars (The Monster and Stonewall Inn).",
+              "A lifelong musician, Samantha began taking piano and voice lessons early on while teaching herself guitar, with guidance from her dad. She holds a B.A. in Music from Rutgers’ Mason Gross School of the Arts, where she trained classically and explored genre fluidity that now defines her sound. She now shares her musical passion and knowledge as a public school music teacher.",
+              "She also has a long history of choral singing from elementary school to college. As a member of the Rutgers Kirkpatrick Choir, Sam shared unique opportunities like performing alongside a professional orchestra at Carnegie Hall, and backing up the Eagles during their Hotel California Tour ‘23 at the Prudential Center.",
+              "Samantha has been songwriting and recording since her teens, but has only recently begun releasing these songs into the world. Whether the spark starts in her journal, on a guitar, or at a piano, she leads with vulnerability through her songwriting.",
+              "Onstage, Sam is energetic and authentic. She might juggle between songs, pop into a handstand, or solve a Rubik’s Cube while the band vamps. This playfulness is anchored by serious musicianship. Lead by her voice, she moves between guitar, piano, ukulele, and sometimes flute, layering colors that keep each set fresh and exciting for any audience.",
+              "Key Influences: Etta James, Amy Winehouse, Alanis Morissette, Brandi Carlile, Janis Joplin, Lizzy McAlpine, Yebba, Olivia Dean, Remi Wolf…",
+              "Live Configurations: solo acoustic act; duo act (The Roomies & other duo collaborations); full‑band shows",
+            ]}
           />
         </Section>
 
