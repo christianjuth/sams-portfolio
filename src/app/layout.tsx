@@ -10,7 +10,26 @@ const poppins = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Samantha Dress",
-  description: "",
+  description: "singer • songwriter • instrumentalist • performer • producer • music educator",
+  openGraph: {
+    type: "website",
+    siteName: "Samantha Dress",
+    images: [
+      {
+        url: 'https://samanthadress.com/hero.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Samantha Dress',
+      },
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: {
+      url: 'https://samanthadress.com/hero.png',
+      alt: 'Samantha Dress',
+    },
+  },
 };
 
 export default function RootLayout({
