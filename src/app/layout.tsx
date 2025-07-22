@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: "singer • songwriter • instrumentalist • performer • producer • music educator",
   openGraph: {
     type: "website",
+    locale: 'en_US',
     siteName: "Samantha Dress",
     images: [
       {
