@@ -105,14 +105,18 @@ export function TourCalendar({
                     ? endDate.format("h:mm A")
                     : endDate.format("lll")}
                 </span>
-                <span className="font-medium">{event.summary}</span>
+                <span className="font-medium text-ellipsis overflow-hidden">
+                  {event.summary}
+                </span>
                 {event.description && (
                   <div
-                    className="prose prose-invert text-sm italic"
+                    className="prose prose-invert text-sm italic text-ellipsis overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: event.description }}
                   />
                 )}
-                <span className="text-sm text-gray-400">{event.location}</span>
+                <span className="text-sm text-gray-400 text-ellipsis overflow-hidden">
+                  {event.location}
+                </span>
               </div>
               <div className="flex flex-row md:flex-col gap-2">
                 {firstUrl && (
