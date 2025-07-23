@@ -13,6 +13,7 @@ import { Bio } from "@/components/sections/bio";
 import Link from "next/link";
 import { ExternalLink } from "@/components/ui";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { TourCalendar } from "@/components/sections/tour-calendar";
 
 function SpotifyEmbed() {
   return (
@@ -29,12 +30,15 @@ function SpotifyEmbed() {
 function Section({
   children,
   className,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }) {
   return (
     <section
+      id={id}
       className={twMerge(
         "relative max-w-7xl w-full mx-auto mb-20 md:mb-32 px-6",
         className,
@@ -57,6 +61,8 @@ export default function Page() {
             blurb="singer • songwriter • instrumentalist • performer • producer • music educator"
             facebook="https://www.facebook.com/sam.laubach.music/"
             instagram="https://www.instagram.com/_samanthadress"
+            bookCta="BOOK NOW"
+            upcomingEventsCta="UPCOMING EVENTS"
           />
         </Section>
 
@@ -99,6 +105,14 @@ export default function Page() {
           <Link href="/photos" className="text-center block pt-3">
             view all photos
           </Link>
+        </Section>
+
+        <Section id="upcoming-events">
+          <TourCalendar
+            title="UPCOMING SHOWS"
+            icalUrl="https://calendar.google.com/calendar/ical/65138dbc87c80e90f51e1ad6850a279be725a04b3a71786550afa5e1c38d63fe%40group.calendar.google.com/public/basic.ics"
+            maxEvents={5}
+          />
         </Section>
       </div>
 

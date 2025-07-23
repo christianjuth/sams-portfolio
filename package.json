@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "dayjs": "^1.11.13",
+    "get-urls": "^12.1.0",
+    "ical.js": "^2.2.0",
+    "lodash": "^4.17.21",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,6 +24,7 @@
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
+    "@types/lodash": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

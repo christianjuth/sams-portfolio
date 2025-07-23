@@ -4,6 +4,7 @@ import { Button, ExternalLink } from "../ui";
 export function Hero({
   title,
   blurb,
+  upcomingEventsCta = "Upcoming Events",
   bookCta = "Book Now",
   facebook,
   instagram,
@@ -12,6 +13,7 @@ export function Hero({
   title: string;
   blurb: string;
   bookCta?: string;
+  upcomingEventsCta?: string;
   facebook?: string;
   instagram?: string;
   spotify?: string;
@@ -40,9 +42,14 @@ export function Hero({
 
       <p className="text-xl text-center">{blurb}</p>
 
-      <Button href="#book" className="w-full">
-        {bookCta}
-      </Button>
+      <div className="flex flex-col w-full gap-4">
+        <Button href="#upcoming-events" className="w-full">
+          {upcomingEventsCta}
+        </Button>
+        <Button href="#book" className="w-full">
+          {bookCta}
+        </Button>
+      </div>
     </div>
   );
 }
