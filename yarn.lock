@@ -437,6 +437,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.83.0":
+  version: 5.83.0
+  resolution: "@tanstack/query-core@npm:5.83.0"
+  checksum: 10c0/e6dc480bc99eaca552a9ad65423788b60368cf99308681252fc7dbe42a3f2c1c978db0d3471cc3349b9112cfb4d967ace4e192a1d7e987e30c5c1ff74809c77c
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.83.0":
+  version: 5.83.0
+  resolution: "@tanstack/react-query@npm:5.83.0"
+  dependencies:
+    "@tanstack/query-core": "npm:5.83.0"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/883229f9219ca906a54d7caafd44d59b57db5dbe87e954f8a7027f460e9f8b97842dfbd0d676dc3111d577baf312c64f6c1fdd67cd1e4b0f0bf574e29670c606
+  languageName: node
+  linkType: hard
+
 "@tweenjs/tween.js@npm:^18.6.4":
   version: 18.6.4
   resolution: "@tweenjs/tween.js@npm:18.6.4"
@@ -1908,6 +1926,7 @@ __metadata:
   resolution: "samantha-dress@workspace:."
   dependencies:
     "@tailwindcss/typography": "npm:^0.5.16"
+    "@tanstack/react-query": "npm:^5.83.0"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
@@ -1927,6 +1946,7 @@ __metadata:
     tailwind-merge: "npm:^3.0.2"
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5"
+    zod: "npm:^4.0.9"
   languageName: unknown
   linkType: soft
 
@@ -2459,5 +2479,12 @@ __metadata:
     load-script: "npm:^1.0.0"
     sister: "npm:^3.0.0"
   checksum: 10c0/c098f276d3172f74bfa0b7ab9d5c0740da1ea028173405d3c0b8dc48b998436ce51f2b1587b113e54de962c3098ffc5bfb2152fe89cc63f7906bcf18062dc39a
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "zod@npm:4.0.9"
+  checksum: 10c0/a690e7a24d4333d0bf06e72848b4aeac06c126989eed522ba02afba4a4f1349661945eaf5c1a32bda7fa655e710ad6116e381c8489e52e77e418908512353b74
   languageName: node
   linkType: hard
