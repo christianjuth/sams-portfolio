@@ -119,7 +119,7 @@ export default function Page() {
       <div className="bg-black/90 backdrop-blur-xl py-32 relative" id="book">
         <Section className="mb-0 md:mb-0">
           <ContactForm
-            email="***REMOVED***"
+            token="***REMOVED***"
             title="BOOK SAM"
             subtitle="solo, duo, or band act offered"
           />

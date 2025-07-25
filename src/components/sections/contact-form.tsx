@@ -3,11 +3,11 @@ import { Button, Input, TextArea } from "../ui";
 export function ContactForm({
   title,
   subtitle,
-  email,
+  token,
 }: {
   title?: string;
   subtitle?: string;
-  email: string;
+  token: string;
 }) {
   return (
     <div className="flex flex-col gap-4">
@@ -16,20 +16,22 @@ export function ContactForm({
       {subtitle && <h3 className="text-xl">{subtitle}</h3>}
 
       <form
-        action={`https://formsubmit.co/${email}`}
+        action={`https://formsubmit.co/${token}`}
         method="POST"
         className="flex flex-col gap-1"
       >
-        <label>name</label>
-        <Input type="text" name="name" required />
+        <input type="text" name="_honey" className="hidden" />
+
+        <label htmlFor="name">name</label>
+        <Input id="name" type="text" name="name" required />
 
         <br />
-        <label>email</label>
-        <Input type="email" name="email" required />
+        <label htmlFor="email">email</label>
+        <Input id="email" type="email" name="email" required />
 
         <br />
-        <label>message</label>
-        <TextArea name="message" />
+        <label htmlFor="message">message</label>
+        <TextArea id="message" name="message" required />
 
         <br />
         <Button type="submit">submit</Button>
