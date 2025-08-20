@@ -79,14 +79,13 @@ export default function Page() {
             image="/about.png"
             title="SAMANTHA DRESS"
             bio={[
-              "Performing under the stage name Samantha Dress, a heartfelt tribute to her late mother, Susan Dress, Samantha first stepped to the mic at age eleven with the Jody Joseph Band at the Stone Pony, where she then performed annually. By her teens she became an official member of the band as a background vocalist, further developing her ear for harmony and ability to collaborate with musicians of all backgrounds, at venues throughout New Jersey.",
-              "At eighteen, Sam launched her solo acoustic act (formerly “Sam Jams”) in the Long Beach Island area. Now based in Asbury Park, she’s a familiar face in Ocean and Monmouth county circuits, with highlights in Puerto Rico, and Manhattan’s West Village piano bars.",
-              "A lifelong musician, Samantha began taking piano and voice lessons early on while teaching herself guitar, with guidance from her dad. She holds a B.A. in Music Education from Rutgers’ Mason Gross School of the Arts, where she trained classically and networked with various musicians- many of whom she now calls best friends and bandmates. As a member of the Rutgers Kirkpatrick Choir, Sam shared unique opportunities like performing alongside a professional orchestra at Carnegie Hall, and singing with the Eagles during their Hotel California Tour ‘23 at the Prudential Center. She continues to share her musical knowledge as a public school general music and choral teacher.",
-              "Samantha has been songwriting and recording since her teens, but has only recently begun releasing songs into the world. Whether the spark ignites in her journal, on a guitar, or at a piano, she leads with vulnerability through her songwriting.",
-              "Onstage, Sam prioritizes authenticity. She might juggle in between songs, pop into a handstand, or solve a Rubik’s Cube while the band vamps. This playfulness is anchored by serious musicianship. Lead by her voice, she moves between guitar, piano, ukulele, and sometimes flute, layering colors that keep each set fresh and exciting for any audience.",
-              "Key Vocal Influences: Etta James, Amy Winehouse, Alanis Morissette, Brandi Carlile, Janis Joplin, Lizzy McAlpine, Yebba, Olivia Dean, Remi Wolf…",
-              "Live Configurations: solo acoustic act; duo act (The Roomies & other duo collaborations); full‑band shows",
-              "",
+              'A dynamic vocalist who ignites through vulnerability, Samantha Dress emphasizes a playful commitment to total authenticity, anchored in serious musicianship.',
+              'Adopting the stage surname Dress in a heartfelt tribute to her late mother, Susan Dress, she’s come a long way since first taking the stage at the iconic Stone Pony at just 11 years old. ',
+              'A lifelong musician, Dress is a classically trained vocalist & pianist as well as a self-taught guitarist. She moves fluidly between piano, keys, ukulele & occasionally flute.',
+              'As a vocalist in the Rutgers Kirkpatrick Choir, Samantha has shared the stage with orchestras at Carnegie Hall as well as classic rock legends The Eagles during their Hotel California Tour.',
+              'She holds a B.A. in Music Education from Rutgers’ Mason Gross School of the Arts. She teaches music by day & performs in piano bars & clubs by night. ',
+              'Her sprawling influences include vocal giants like Etta James, Janis Joplin, Amy Winehouse, Alanis Morissette & Yebba; folk writers Brandi Carlisle & Lizzy McAlpine, plus contemporary indie pop/soul artists like Remi Wolf & Olivia Dean.',
+              'She blends these influences into her own distinct style, employing a tasteful variety of instrumentation & live layering for a full sound, even solo, & always writing from the rawness of experience.Stream her debut single, “Between the Lines,” out now, & follow her on Spotify to be the first to hear what’s next.',
             ]}
           />
         </Section>
