@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { TanstackQueryProvider } from "@/components/tanstack-query";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/google-analytics";
 
 const poppins = Playfair_Display({
   variable: "--font-playfair-display",
@@ -42,6 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleAnalytics gaId="G-MH5XGPCC5G" />
+      </head>
       <body className={`${poppins.variable} antialiased bg-black text-white`}>
         <TanstackQueryProvider>{children}</TanstackQueryProvider>
       </body>
