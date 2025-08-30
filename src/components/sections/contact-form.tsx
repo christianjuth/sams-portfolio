@@ -30,11 +30,11 @@ export function ContactForm({
         <input type="text" name="_honey" className="hidden" />
 
         <label htmlFor="name">name</label>
-        <Input id="name" type="text" name="name" required />
+        <Input id="name" type="text" name="name" autoComplete="name" required />
 
         <br />
         <label htmlFor="email">email</label>
-        <Input id="email" type="email" name="email" required />
+        <Input id="email" type="email" name="email" autoComplete="email" required />
 
         <br />
         <label htmlFor="message">message</label>
