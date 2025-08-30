@@ -13,7 +13,7 @@ const poppins = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Samantha Dress | Singer, Songwriter, Instrumentalist & Performer",
+  title: `${config.name} | Singer, Songwriter, Instrumentalist & Performer`,
   description:
     "A dynamic vocalist who ignites through vulnerability, Samantha Dress emphasizes a playful commitment to total authenticity, anchored in serious musicianship.",
   openGraph: {

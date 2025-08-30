@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { config } from '../config'
+import { Metadata } from 'next'
 
 const IMAGES = [
   "/slide-3.png",
@@ -8,6 +10,10 @@ const IMAGES = [
   "/slide-5.png",
   "/slide-6.png",
 ]
+
+export const metadata: Metadata = {
+  title: `${config.name} | Photos`
+}
 
 export default function Page() {
   return (
