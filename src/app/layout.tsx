@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleAnalytics gaId="G-MH5XGPCC5G" />
+        <GoogleAnalytics />
       </head>
       <body className={`${poppins.variable} antialiased bg-black text-white`}>
         <TanstackQueryProvider>{children}</TanstackQueryProvider>

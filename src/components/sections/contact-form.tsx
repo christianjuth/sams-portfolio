@@ -1,3 +1,6 @@
+"use client"
+
+import { useUserIdentity } from "../google-analytics";
 import { Button, Input, TextArea } from "../ui";
 
 export function ContactForm({
@@ -9,6 +12,8 @@ export function ContactForm({
   subtitle?: string;
   token: string;
 }) {
+  const identity = useUserIdentity();
+
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-3xl">{title ?? "BOOKING"}</h2>
@@ -20,6 +25,8 @@ export function ContactForm({
         method="POST"
         className="flex flex-col gap-1"
       >
+        <input type="text" name="user_id" className="hidden" value={identity ?? ""} readOnly />
+
         <input type="text" name="_honey" className="hidden" />
 
         <label htmlFor="name">name</label>
