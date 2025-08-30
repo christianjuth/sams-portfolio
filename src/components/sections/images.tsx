@@ -25,9 +25,9 @@ export function ImageSlider({
         nextArrow={<FaChevronRight className="md:mr-4 text-3xl" />}
         canSwipe
       >
-        {images.map(img => (
+        {images.map((img, i) => (
           <div key={img} className="aspect-square flex items-center content-center bg-cover relative md:mx-3">
-            <Image src={img} alt="" fill className="object-cover" />
+            <Image src={img} alt={`Headshot ${i + 1}`} fill className="object-cover" />
           </div>
         ))}
       </Slide>

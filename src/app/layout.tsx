@@ -3,6 +3,8 @@ import { Playfair_Display } from "next/font/google";
 import { TanstackQueryProvider } from "@/components/tanstack-query";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import Script from 'next/script';
+import { config } from "./config";
 
 const poppins = Playfair_Display({
   variable: "--font-playfair-display",
@@ -11,9 +13,9 @@ const poppins = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Samantha Dress",
+  title: "Samantha Dress | Singer, Songwriter, Instrumentalist & Performer",
   description:
-    "singer • songwriter • instrumentalist • performer • producer • music educator",
+    "A dynamic vocalist who ignites through vulnerability, Samantha Dress emphasizes a playful commitment to total authenticity, anchored in serious musicianship.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -36,6 +38,36 @@ export const metadata: Metadata = {
   },
 };
 
+function JsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": config.name,
+    "alternateName": config.name,
+    "jobTitle": config.jobDescription.replaceAll("•", ","),
+    "url": "https://samanthadress.com/",
+    "sameAs": [
+      config.facebook,
+      config.instagram,
+      config.spotify,
+      config.appleMusic,
+    ],
+    "image": "https://samanthadress.com/hero.png",
+    "description": config.jobDescription.replaceAll("•", ","),
+    "genre": config.genres
+  }
+  return (
+    <Script
+      id="ld-json"
+      type="application/ld+json"
+      strategy="afterInteractive"
+      key="structured-data"
+    >
+      {JSON.stringify(data)}
+    </Script>
+  )
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +77,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
+        <JsonLd />
       </head>
       <body className={`${poppins.variable} antialiased bg-black text-white`}>
         <TanstackQueryProvider>{children}</TanstackQueryProvider>

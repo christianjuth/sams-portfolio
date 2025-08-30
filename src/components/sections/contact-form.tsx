@@ -16,7 +16,7 @@ export function ContactForm({
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-3xl">{title ?? "BOOKING"}</h2>
+      <h2 className="text-3xl font-heading">{title ?? "BOOKING"}</h2>
 
       {subtitle && <h3 className="text-xl">{subtitle}</h3>}
 

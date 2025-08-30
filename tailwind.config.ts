@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        heading: "var(--font-playfair-display)"
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

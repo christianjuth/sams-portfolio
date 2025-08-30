@@ -14,6 +14,7 @@ import Link from "next/link";
 import { ExternalLink } from "@/components/ui";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { TourCalendar } from "@/components/sections/tour-calendar";
+import { config } from "./config";
 
 function SpotifyEmbed() {
   return (
@@ -31,13 +32,16 @@ function Section({
   children,
   className,
   id,
+  as = "section",
 }: {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  as?: "section" | "header",
 }) {
+  const Tag = as;
   return (
-    <section
+    <Tag
       id={id}
       className={twMerge(
         "relative max-w-7xl w-full mx-auto mb-20 md:mb-32 px-6",
@@ -45,7 +49,7 @@ function Section({
       )}
     >
       {children}
-    </section>
+    </Tag>
   );
 }
 
@@ -55,22 +59,26 @@ export default function Page() {
       <BackgroundImage src="/hero.png" />
 
       <div className="flex flex-col relative">
-        <Section className="mb-0 md:mb-0">
+        <Section className="mb-0 md:mb-0" as="header">
           <Hero
             title="SAMANTHA DRESS"
             blurb="singer • songwriter • instrumentalist • performer • producer • music educator"
-            facebook="https://www.facebook.com/sam.laubach.music/"
-            instagram="https://www.instagram.com/_samanthadress"
+            facebook={config.facebook}
+            instagram={config.instagram}
+            spotify={config.spotify}
+            appleMusic={config.appleMusic}
             bookCta="BOOK NOW"
             upcomingEventsCta="UPCOMING EVENTS"
           />
         </Section>
 
         <Section>
+          <h2 className="sr-only">Listen to latest Spotify release</h2>
           <SpotifyEmbed />
         </Section>
 
         <Section>
+          <h2 className="sr-only">Watch performance</h2>
           <YouTubeSection videoId="TWvw9aOVJa4" />
         </Section>
 
@@ -91,6 +99,7 @@ export default function Page() {
         </Section>
 
         <Section>
+          <h2 className="sr-only">Headshots</h2>
           <ImageSlider
             images={[
               "/slide-3.png",
@@ -130,21 +139,21 @@ export default function Page() {
         id="book"
       >
         <Section className="mb-0 md:mb-0 flex flex-col max-md:items-center">
-          <h2 className="text-xl block mb-6">other projects</h2>
+          <h2 className="text-xl block mb-6 font-heading">other projects</h2>
 
           <div className="max-w-xs flex flex-col items-center gap-2">
             <Image src={TheRoomies} alt="The Roomies" />
             <div className="flex flex-row gap-2 items-center text-2xl">
               <ExternalLink href="https://www.youtube.com/@theroomies387/featured">
-                <FaYoutube />
+                <FaYoutube aria-label="YouTube" />
               </ExternalLink>
               |
               <ExternalLink href="https://www.instagram.com/theroomiesduo">
-                <FaInstagram />
+                <FaInstagram aria-label="Instagram" />
               </ExternalLink>
               |
               <ExternalLink href="https://www.facebook.com/theroomiesduo">
-                <FaFacebook />
+                <FaFacebook aria-label="Facebook" />
               </ExternalLink>
             </div>
           </div>

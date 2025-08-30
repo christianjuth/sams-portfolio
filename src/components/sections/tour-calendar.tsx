@@ -121,7 +121,7 @@ export function TourCalendar({
 
   return (
     <div className="bg-black p-6">
-      <h2 className="font-bold text-3xl mb-4">{title}</h2>
+      <h2 className="font-heading text-3xl mb-4">{title}</h2>
 
       <div
         className={cn(
@@ -145,7 +145,7 @@ export function TourCalendar({
           const firstUrl = urls?.values().toArray()[0];
           const isTicketUrl = firstUrl?.toLowerCase().includes("ticket");
           return (
-            <div
+            <article
               key={event.uid}
               className={cn(
                 "py-5 flex flex-col md:flex-row md:items-center justify-between gap-3",
@@ -153,18 +153,18 @@ export function TourCalendar({
               )}
             >
               <div className="flex flex-col gap-2">
-                <span className="text-sm text-gray-400">
+                <time className="text-sm text-gray-400" dateTime={startDate.toISOString()}>
                   {startDate.format("lll")}
                   {" - "}
                   {isSameDate
                     ? endDate.format("h:mm A")
                     : endDate.format("lll")}
-                </span>
-                <span className="font-medium text-ellipsis overflow-hidden">
+                </time>
+                <h3 className="font-medium text-ellipsis overflow-hidden">
                   {event.summary}
-                </span>
+                </h3>
                 {event.description && (
-                  <div
+                  <p
                     className="prose prose-invert text-sm italic text-ellipsis overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: event.description }}
                   />
@@ -189,7 +189,7 @@ export function TourCalendar({
                   </Button>
                 )}
               </div>
-            </div>
+            </article>
           );
         })}
       </div>
