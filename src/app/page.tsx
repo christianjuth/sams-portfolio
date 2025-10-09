@@ -15,6 +15,7 @@ import { ExternalLink } from "@/components/ui";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { TourCalendar } from "@/components/sections/tour-calendar";
 import { config } from "./config";
+import { ShowMore } from "@/components/show-more";
 
 function SpotifyEmbed() {
   return (
@@ -79,7 +80,10 @@ export default function Page() {
 
         <Section>
           <h2 className="sr-only">Watch performance</h2>
-          <YouTubeSection videoId="TWvw9aOVJa4" />
+          <YouTubeSection videoId="QzGqhbU4Bx0" />
+          <ShowMore label="videos">
+            <YouTubeSection videoId="TWvw9aOVJa4" />
+          </ShowMore>
         </Section>
 
         <Section>
