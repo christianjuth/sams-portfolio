@@ -137,6 +137,7 @@ export function TourCalendar({
           const startDate = dayjs(event.startDate.toJSDate());
           const endDate = dayjs(event.endDate.toJSDate());
           const isSameDate = startDate.isSame(endDate, "day");
+          const isLongerThan12Hours = startDate.diff(endDate, "h") >= 12;
           const summaryLowerCased = event.summary.toLowerCase();
           const isCanceled =
             summaryLowerCased.includes("canceled") ||
@@ -154,11 +155,11 @@ export function TourCalendar({
             >
               <div className="flex flex-col gap-2">
                 <time className="text-sm text-gray-400" dateTime={startDate.toISOString()}>
-                  {startDate.format("lll")}
+                  {startDate.format("ddd, lll")}
                   {" - "}
-                  {isSameDate
-                    ? endDate.format("h:mm A")
-                    : endDate.format("lll")}
+                  {(!isSameDate && isLongerThan12Hours)
+                    ? endDate.format("lll")
+                    : endDate.format("h:mm A")}
                 </time>
                 <h3 className="font-medium text-ellipsis overflow-hidden">
                   {event.summary}
