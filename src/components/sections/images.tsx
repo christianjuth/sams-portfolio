@@ -15,7 +15,7 @@ export function ImageSlider({
   const breakpoint = useBreakpoint();
 
   return (
-    <div className="-mx-2 select-none">
+    <div className="md:-mx-2 select-none">
       <Slide
         arrows
         slidesToShow={breakpoint.md ? 2 : 1}
