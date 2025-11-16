@@ -4,6 +4,8 @@ import {
   InputHTMLAttributes,
   TextareaHTMLAttributes,
 } from "react";
+import { cva, VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/cn";
 
 export function Input(
   props: DetailedHTMLProps<
@@ -24,6 +26,18 @@ export function TextArea(
     <textarea {...props} className={`p-2 text-black ${props.className}`} />
   );
 }
+const button = cva(["text-center border border-white center hover:bg-white hover:text-black transition-colors"], {
+  variants: {
+    size: {
+      small: "p-2 py-1.5",
+      medium: "px-3 py-2.5",
+      large: "p-3 text-lg",
+    }
+  },
+  defaultVariants: {
+    size: "medium",
+  },
+});
 
 export function Button({
   children,
@@ -31,6 +45,7 @@ export function Button({
   type,
   onClick,
   targetBlank,
+  size,
   ...props
 }: {
   children: React.ReactNode;
@@ -39,8 +54,8 @@ export function Button({
   className?: string;
   onClick?: () => void;
   targetBlank?: boolean;
-}) {
-  const className = `border border-white p-4 font-medium text-center hover:bg-white hover:text-black transition-colors ${props.className}`;
+} & VariantProps<typeof button>) {
+  const className = cn(button({ size }), props.className);
 
   if (href) {
     return (

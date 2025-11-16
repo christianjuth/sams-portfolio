@@ -180,13 +180,12 @@ export function TourCalendar({
               </div>
               <div className="flex flex-row md:flex-col gap-2">
                 {firstUrl && (
-                  <Button className="py-1.5" href={firstUrl} targetBlank>
+                  <Button href={firstUrl} targetBlank>
                     {isTicketUrl ? "Tickets" : "Link"}
                   </Button>
                 )}
                 {event.location && (
                   <Button
-                    className="py-1.5"
                     href={`https://www.google.com/maps?q=${event.location}`}
                     targetBlank
                   >
@@ -200,7 +199,7 @@ export function TourCalendar({
       </div>
 
       {hiddenEvents > 0 && (
-        <Button className="py-1.5 px-3 mt-4" onClick={() => setMaxEvents(9999)}>
+        <Button className="mt-4" onClick={() => setMaxEvents(9999)}>
           show {hiddenEvents} more event{hiddenEvents > 1 && "s"}
         </Button>
       )}

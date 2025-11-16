@@ -41,7 +41,7 @@ export function ContactForm({
         <TextArea id="message" name="message" required />
 
         <br />
-        <Button type="submit">submit</Button>
+        <Button size="large" type="submit">submit</Button>
       </form>
     </div>
   );

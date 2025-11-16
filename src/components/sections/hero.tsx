@@ -51,10 +51,10 @@ export function Hero({
       <h2 className="text-xl text-center">{blurb}</h2>
 
       <nav className="flex flex-col w-full gap-4" aria-label="Main Call to Action">
-        <Button href="#upcoming-events" className="w-full">
+        <Button href="#upcoming-events" className="w-full" size="large">
           {upcomingEventsCta}
         </Button>
-        <Button href="#book" className="w-full">
+        <Button href="#book" className="w-full" size="large">
           {bookCta}
         </Button>
       </nav>
