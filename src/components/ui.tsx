@@ -40,7 +40,7 @@ export function Button({
   onClick?: () => void;
   targetBlank?: boolean;
 }) {
-  const className = `border border-white p-4 text-center hover:bg-white hover:text-black transition-colors ${props.className}`;
+  const className = `border border-white p-4 font-medium text-center hover:bg-white hover:text-black transition-colors ${props.className}`;
 
   if (href) {
     return (
@@ -49,9 +49,9 @@ export function Button({
         className={className}
         {...(targetBlank
           ? {
-              target: "blank",
-              rel: "noreferrer noopener",
-            }
+            target: "blank",
+            rel: "noreferrer noopener",
+          }
           : null)}
       >
         {children}
