@@ -138,6 +138,7 @@ export function TourCalendar({
           const endDate = dayjs(event.endDate.toJSDate());
           const isSameDate = startDate.isSame(endDate, "day");
           const isLongerThan12Hours = startDate.diff(endDate, "h") >= 12;
+          const isThisYear = startDate.isSame(today, "year");
           const summaryLowerCased = event.summary.toLowerCase();
           const isCanceled =
             summaryLowerCased.includes("canceled") ||
@@ -153,14 +154,17 @@ export function TourCalendar({
                 isCanceled && "line-through",
               )}
             >
-              <div className="flex flex-col gap-2">
-                <time className="text-sm text-gray-400" dateTime={startDate.toISOString()}>
-                  {startDate.format("ddd, lll")}
+              <time className="flex flex-col" dateTime={startDate.toISOString()}>
+                <span className="text-xl w-full font-black">{startDate.format("ddd")}, {startDate.format(isThisYear ? "MMM D" : "MMM D")}</span>
+                <span className="text-nowrap font-medium">
+                  {startDate.format("h:mma")}
                   {" - "}
                   {(!isSameDate && isLongerThan12Hours)
                     ? endDate.format("lll")
                     : endDate.format("h:mm A")}
-                </time>
+                </span>
+              </time>
+              <div className="flex flex-col md:items-center md:text-center">
                 <h3 className="font-medium text-ellipsis overflow-hidden">
                   {event.summary}
                 </h3>
@@ -170,7 +174,7 @@ export function TourCalendar({
                     dangerouslySetInnerHTML={{ __html: event.description }}
                   />
                 )}
-                <span className="text-sm text-gray-400 text-ellipsis overflow-hidden">
+                <span className="text-sm font-medium text-gray-400 text-ellipsis overflow-hidden">
                   {event.location}
                 </span>
               </div>
