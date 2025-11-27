@@ -1228,6 +1228,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"linkify-html@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "linkify-html@npm:4.3.2"
+  peerDependencies:
+    linkifyjs: ^4.0.0
+  checksum: 10c0/22144151d1f88a0d73eb573026186279ab44108b784230c34e12d90b65e47c9bf95889368dcd8a11e98025501417c745b041edcfe341899f1580157de0bd502b
+  languageName: node
+  linkType: hard
+
+"linkifyjs@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "linkifyjs@npm:4.3.2"
+  checksum: 10c0/1a85e6b368304a4417567fe5e38651681e3e82465590836942d1b4f3c834cc35532898eb1e2479f6337d9144b297d418eb708b6be8ed0b3dc3954a3588e07971
+  languageName: node
+  linkType: hard
+
 "load-script@npm:^1.0.0":
   version: 1.0.0
   resolution: "load-script@npm:1.0.0"
@@ -1959,6 +1975,8 @@ __metadata:
     dayjs: "npm:^1.11.13"
     get-urls: "npm:^12.1.0"
     ical.js: "npm:^2.2.0"
+    linkify-html: "npm:^4.3.2"
+    linkifyjs: "npm:^4.3.2"
     lodash: "npm:^4.17.21"
     next: "npm:15.5.2"
     postcss: "npm:^8"

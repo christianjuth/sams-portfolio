@@ -11,6 +11,7 @@ import getUrls from "get-urls";
 import { useQuery } from "@tanstack/react-query";
 import z from "zod";
 import { ImSpinner8 } from "react-icons/im";
+import linkifyHtml from 'linkify-html';
 
 dayjs.extend(localizedFormat);
 
@@ -143,9 +144,10 @@ export function TourCalendar({
           const isCanceled =
             summaryLowerCased.includes("canceled") ||
             summaryLowerCased.includes("cancelled");
-          const urls = event.description ? getUrls(event.description) : null;
+          const urls = event.description ? getUrls(event.description, { stripWWW: false }) : null;
           const firstUrl = urls?.values().toArray()[0];
           const isTicketUrl = firstUrl?.toLowerCase().includes("ticket");
+          const description = (event.description);
           return (
             <article
               key={event.uid}
@@ -154,24 +156,24 @@ export function TourCalendar({
                 isCanceled && "line-through",
               )}
             >
-              <time className="flex flex-col" dateTime={startDate.toISOString()}>
-                <span className="text-xl w-full font-black">{startDate.format("ddd")}, {startDate.format(isThisYear ? "MMM D" : "MMM D")}</span>
-                <span className="text-nowrap font-medium">
+              <time className="flex justify-between items-center md:flex-col" dateTime={startDate.toISOString()}>
+                <span className="text-xl md:w-full font-black">{startDate.format("ddd")}, {startDate.format(isThisYear ? "MMM D" : "MMM D")}</span>
+                <span className="text-nowrap font-black md:font-medium">
                   {startDate.format("h:mma")}
-                  {" - "}
+                  {"-"}
                   {(!isSameDate && isLongerThan12Hours)
                     ? endDate.format("lll")
-                    : endDate.format("h:mm A")}
+                    : endDate.format("h:mma")}
                 </span>
               </time>
-              <div className="flex flex-col md:items-center md:text-center">
-                <h3 className="font-medium text-ellipsis overflow-hidden">
+              <div className="flex flex-col md:items-center md:text-center overflow-hidden gap-2 md:gap-1">
+                <h3 className="font-bold md:font-medium text-ellipsis overflow-hidden">
                   {event.summary}
                 </h3>
-                {event.description && (
+                {description && (
                   <p
-                    className="prose prose-invert text-sm italic text-ellipsis overflow-hidden"
-                    dangerouslySetInnerHTML={{ __html: event.description }}
+                    className="prose prose-sm prose-invert italic text-ellipsis overflow-hidden [&_a]:max-w-sm [&_a]:inline-block [&_a]:overflow-hidden [&_a]:text-nowrap [&_a]:text-ellipsis [&_a]:align-bottom [&_a]:text-[var(--tw-prose-body)]"
+                    dangerouslySetInnerHTML={{ __html: linkifyHtml(description, { target: "_blank", rel: "noopener noreferrer", }) }}
                   />
                 )}
                 <span className="text-sm font-medium text-gray-400 text-ellipsis overflow-hidden">
